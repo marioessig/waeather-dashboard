@@ -32,6 +32,6 @@ Create an application that users can look up weather for the location input.
 ![Website Screenshot](https://github.com/marioessig/waeather-dashboard/blob/master/assets/images/WebsiteScreenshot.gif)
 
 ### Links:
-[Deployed Application URL]()
+[Deployed Application URL](https://marioessig.github.io/weather-dashboard)
 
-[GitHub Repository URL]()
+[GitHub Repository URL](https://github.com/marioessig/weather-dashboard)
