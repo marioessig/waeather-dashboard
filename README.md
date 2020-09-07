@@ -29,7 +29,7 @@ Create an application that users can look up weather for the location input.
 *THEN* I am again presented with current and future conditions for that city <br>
 
 ### Refactored Webpage Screenshot
-![Website Screenshot]()
+![Website Screenshot](https://github.com/marioessig/waeather-dashboard/blob/master/assets/images/WebsiteScreenshot.gif)
 
 ### Links:
 [Deployed Application URL]()
