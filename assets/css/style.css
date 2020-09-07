@@ -1,22 +1,156 @@
-/* header styles start */
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    margin: 7px auto;
+
+body {
+    font-family: arial;
     background-color: lightblue;
-    border-bottom: 1px solid blue;
+  }
+  
+  .flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  .city-input {
+    min-width: 255px;
+  }
+
+  .btn {
+    border: none;
+    background-color: inherit;
     color: blue;
-    height: 50px;
-}
+    padding: 5px 5px 5px 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
 
-header a {
-    text-decoration: none;
-}
+  .btn-style {
+      border-style: solid;
+      border-width: 1px;
+      border-radius: 13px;
+      background-color: blue;
+      color: white;
+  }
+  
+  .btn:hover {
+    background: #eeeeee;
+  }
+  
+  .next5Days {
+    align-items: center;
+    margin-bottom: 5px;
+    min-height: 85%;
+  }
+  
+  .day-panels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+  }
+  
+  .row {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: arial;
+  }
 
-header a:hover {
-    color: purple;
-}
-/* header styles end */
+  h1 {
+    background-color: blue;
+    color: white;
+    padding: 10px 0 5px 0;
+    text-align: center;
+    font-family:  arial;
+    font-weight:  bolder;
+  }
+
+  h5, .forecast {
+    font-weight: bold;
+    margin: 30px 0 10px 0;
+  }
+
+  h7 {
+    font-size: 0.5em;
+    font-style: italic;
+  }
+
+  .today {
+    font-family: arial;
+    font-size: 1.1em;
+  }
+  
+  .currentday {
+    margin: 10px 0 10px 0;
+  }
+  
+  .local1 {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    text-align: bottom;
+  }
+  
+  .local2 {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 0.85em;
+  }
+  
+  .local3 {
+    margin-bottom: 5px;
+    padding-bottom: 0;
+    text-align: bottom;
+    font-size: 1em;
+  }
+  
+  .redwhite {
+    background-color: red;
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  .card {
+    min-width: 80%; 
+    justify-content: left;
+  }
+  
+  .card-header {
+    padding-top: 0;
+    margin-top: 10px;
+  }
+  
+  .previous {
+    padding-bottom: 3px;
+    margin-bottom: 0px;
+  }
+  
+  ul.list-group {
+    min-height: 130px;
+  }
+
+  .daycard { 
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px 0 5px 0;
+  }
+  
+  .daycard, ul {
+    background-color: blue;
+    color: white;
+    list-style-type: none;
+    min-width: 19%;
+    justify-content: left;
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 5px;
+    font-size: .9em;
+  }
+  
+  @media screen and (max-width: 780px) {
+    form .container-fluid {
+      flex: 1 100%;
+    }
+} 

@@ -1,114 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Weather Dashboard</title>
 </head>
-<body>
-    <header>
-        <h1 class"title">Weather Dashboard</h1>
-    </header>
 
-    <main>
-        <div>
-            <!-- set city search section -->
-            <div>
-            <h5>Search for a City<br>
-                <i>Tip: Type city, state (with full state names only).</i>
-            </h5>
+<body class="flex-column min-100-vh">
+  <header>
+    <h1>Weather Dashboard</h1>
+  </header>
 
-            <form>
-                <input/>
-                <button>
-                </button>
-            </form>
-            </div>
-    
-            <!-- history section -->
-            <div>
+    <main class="flex-row justify-space-between">
+        <div class="row container-fluid">
+            <div class="col-3 city-input">
+
+                <!-- search section -->  
+                <div class="card">
+                    <h5 class="card-header">Search for a City</h5>
+                    
+                    <form class="card-body" id="city-form">
+                    <input class="form-input" id="cityname" name="cityname" id="cityname" type="text" autofocus="true">
+                    <h7>Tip: type city, state (full state names only)</h7>
+                    <button type="submit" class="btn btn-style">
+                        Search
+                    </button>
+                    </form>
+                </div>
+
+                <!-- search history section -->
+                <div class="card row">
+                    <h5 class="card-header">Recent City Searches
+                        <br>
+                    <h7>(Up to 7 searches will show)</h7>
+                    <button class="btn btn-style" id="clear-all" type="button">
+                        Clear
+                    </button>
+                    </h5>
+                </div>
+
+                <div id="previous-cities">
+                    <div class="row">
+                        <p class="previous btn" id="p0"></p>
+                    </div>
+                    <div class="row">
+                        <p class="previous btn" id="p1"></p>
+                    </div>
+                    <div class="row">
+                        <p class="previous btn" id="p2"></p>
+                    </div>
+                    <div class="row">
+                        <p class="previous btn" id="p3"></p>
+                    </div>
+                    <div class="row">
+                        <p class="previous btn" id="p4"></p>
+                    </div>
+                    <div class="row">
+                        <p class="previous btn" id="p5"></p>
+                    </div>
+                    <div class="row">
+                        <p class="previous btn" id="p6"></p>
+                    </div>
+                </div>
             </div>
 
-            <div>
-            <!-- history list of seven cities -->
-            <div class="row">
-                <p class="previous btn" id="0"></p>
-            </div>
-            <div class="row">
-                <p class="previous btn" id="1"></p>
-            </div>
-            <div class="row">
-                <p class="previous btn" id="2"></p>
-            </div>
-            <div class="row">
-                <p class="previous btn" id="3"></p>
-            </div>
-            <div class="row">
-                <p class="previous btn" id="4"></p>
-            </div>
-            <div class="row">
-                <p class="previous btn" id="5"></p>
-            </div>
-            <div class="row">
-                <p class="previous btn" id="6"></p>
-            </div>
+            <!-- current day weather forecast section -->
+            <div class="col-9">
+                <div class="row">
+                    <h5 class="currentday">Current Weather</h5>
+                </div>
+                <div class=" row today local1">
+                    <p class="local1" id="citytext"></p>
+                </div>
+                <div class="row today local2">
+                    <p class="local2" id="citylocation"></p>
+                </div>
+                <div class="row today">
+                    <p class="local3" id="temperature"></p>
+                </div>  
+                <div class="row today">
+                    <p class="local3" id="humidity"></p>
+                </div>
+                <div class="row today">
+                    <p class="local3" id="wind"></p>
+                </div>
+                <div class="row today">
+                    <p class="local3" id="uv"></p>
+                    <p class="local3 redwhite" id="uv-value"></p>
+                </div>
+
+                <!-- 5-day weather forecast section -->
+                <div class="row">
+                    <h5 class="forecast">5-Day Forecast:</h5>
+                </div>
+
+                <div class="row ">
+                    <div class="container next5Days">
+                        <div class="row day-panels">
+                            <div class="col-md-2 mr-1 card daycard">
+                                <ul id="day1"></ul>
+                            </div>
+                            <div class="col-md-2 mr-1 card daycard">
+                                <ul id="day2"></ul>
+                            </div>
+                            <div class="col-md-2 mr-1 card daycard">
+                                <ul id="day3"></ul>
+                            </div>
+                            <div class="col-md-2 mr-1 card daycard">
+                                <ul id="day4"></ul>
+                            </div>
+                            <div class="col-md-2 mr-1 card daycard">
+                                <ul id="day5"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </main>
 
-        <!-- display weather data for current day -->
-        <div>
-            <div class="row">
-                <h5 class="currentday">Current Weather</h5>
-            </div>
-            <div>
-                <p></p>
-            </div>
-            <div>
-                <p></p>
-            </div>
-            <div>
-                <p></p>
-            </div>
-            <div>
-                <p></p>
-            </div>
-            <div>
-                <p></p>
-            </div>
-            <div>
-                <p></p>
-            </div>
-        </div>
-
-        <!-- five-day weather forecast section-->
-        <div class="row">
-            <h5 class="forecast">5-Day Forecast</h5>
-        </div>
-        <div class="row">
-            <div>
-                <ul id="day1"></ul>
-            </div>
-            <div>
-                <ul id="day2"></ul>
-            </div>
-            <div>
-                <ul id="day3"></ul>
-            </div>
-            <div>
-                <ul id="day4"></ul>
-            </div>
-            <div>
-                <ul id="day5"></ul>
-            </div>
-        </div>
-      </main>
-    
-      <!-- Include the JavaScript file -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-      <script src="./assets/js/script.js"></script>
-    </body>
-    
-    </html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
