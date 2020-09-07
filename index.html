@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1 class"title">Weather Dashboard</h1>
+    </header>
+
+    <main>
+        <div>
+            <!-- set city search section -->
+            <div>
+            <h5>Search for a City<br>
+                <i>Tip: Type city, state (with full state names only).</i>
+            </h5>
+
+            <form>
+                <input/>
+                <button>
+                </button>
+            </form>
+            </div>
+    
+            <!-- history section -->
+            <div>
+            </div>
+
+            <div>
+            <!-- history list of seven cities -->
+            <div class="row">
+                <p class="previous btn" id="0"></p>
+            </div>
+            <div class="row">
+                <p class="previous btn" id="1"></p>
+            </div>
+            <div class="row">
+                <p class="previous btn" id="2"></p>
+            </div>
+            <div class="row">
+                <p class="previous btn" id="3"></p>
+            </div>
+            <div class="row">
+                <p class="previous btn" id="4"></p>
+            </div>
+            <div class="row">
+                <p class="previous btn" id="5"></p>
+            </div>
+            <div class="row">
+                <p class="previous btn" id="6"></p>
+            </div>
+            </div>
+        </div>
+
+        <!-- display weather data for current day -->
+        <div>
+            <div class="row">
+                <h5 class="currentday">Current Weather</h5>
+            </div>
+            <div>
+                <p></p>
+            </div>
+            <div>
+                <p></p>
+            </div>
+            <div>
+                <p></p>
+            </div>
+            <div>
+                <p></p>
+            </div>
+            <div>
+                <p></p>
+            </div>
+            <div>
+                <p></p>
+            </div>
+        </div>
+
+        <!-- five-day weather forecast section-->
+        <div class="row">
+            <h5 class="forecast">5-Day Forecast</h5>
+        </div>
+        <div class="row">
+            <div>
+                <ul id="day1"></ul>
+            </div>
+            <div>
+                <ul id="day2"></ul>
+            </div>
+            <div>
+                <ul id="day3"></ul>
+            </div>
+            <div>
+                <ul id="day4"></ul>
+            </div>
+            <div>
+                <ul id="day5"></ul>
+            </div>
+        </div>
+      </main>
+    
+      <!-- Include the JavaScript file -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+      <script src="./assets/js/script.js"></script>
+    </body>
+    
+    </html>
+</body>
+</html>

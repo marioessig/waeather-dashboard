@@ -1,0 +1,22 @@
+/* header styles start */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 7px auto;
+    background-color: lightblue;
+    border-bottom: 1px solid blue;
+    color: blue;
+    height: 50px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a:hover {
+    color: purple;
+}
+/* header styles end */
